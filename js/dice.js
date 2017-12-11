@@ -1,6 +1,6 @@
+console.log("loded dice");
 var dice = function(min, max){
 	return Math.floor(Math.random() * (max - min) + min);
-	console.log(dice);
 }
 
 function rollIV() {
