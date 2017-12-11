@@ -2,42 +2,70 @@
 <html>
 <head>
 	<title>Welcome to T.o.t.M.</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-	<div><input id="settings" type="button" value="Settings"></div>
-	<div><h1> Welcome to the Theater of the Mind </h1></div>
+	<div><h1 id="totm"> Welcome to the Theater of the Mind </h1></div>
 	<br>
 	<div id="charSheet">
-		<h3>Character Sheet</h3>
-
+		<h3>Name:</h3>
+		<div id="info">
+			<p>Level:</p>
+			<p>Class:</p>
+			<p>Alignment:</p>
+		</div>
+		<br>
+		<div id="hpac">
+			<p>Hit Points:</p>
+			<p>Armor Class:</p>
+		</div>
+		<br>
+		<div id="stats">
+			<p>Str:</p>
+			<p>Dex:</p>
+			<p>Con:</p>
+			<p>Int:</p>
+			<p>Wis:</p>
+			<p>Cha:</p>
+		</div>
+		<div id="thing">
+			<div id="saves">
+				<p>Poison:</p>
+				<p>Wands:</p>
+				<p>Paralysis:</p>
+				<p>Breath:</p>
+				<p>Spells:</p>
+			</div>
+			<div id="exp"><p>XP:</p></div>
+		</div>
 	</div>
+	<input id="settings" type="button" value="Settings">
 	<div id="log">
 		<h3>Log Book</h3>
 		<p>&nbsp;</p>
+		<input id="cmd" type="text" placeholder="What do you want to do..."><input id="submit" type="submit" value="We'll see">
 	</div>
 	<div id="gear">
-		<div>
+		<div id="store">
 			<h3>In Room</h3>
-			<ul id="floor store">
-				
-			</ul>
+			<ol>
+				<li>Nothing...</li>
+			</ol>
 		</div>
 		<br>
-		<div>
+		<div id="inventory">
 			<h3>Inventory</h3>
-			<ul id="inventory">
-				
-			</ul>
+			<ol>
+				<li>Nothing...</li>
+			</ol>
 		</div>
 	</div>
-	<br>
-	<div><input id="cmd" type="text" placeholder="What do you want to do?"></div>
 
-
-
-
-	<script type="text/javascript" src="./dice.js"></script>
+	<script type="text/javascript" src="./js/dice.js"></script>
+	<script type="text/javascript" src="./js/combat.js"></script>
+	<script type="text/javascript" src="./js/create.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </body>
 </html>
