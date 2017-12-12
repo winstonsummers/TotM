@@ -1,5 +1,9 @@
 console.log("loaded combat");
 
+//array for loot on ground/in store
+
+//array for inventory
+
 //generate loot, give exp
 
 //attack function
@@ -8,6 +12,8 @@ console.log("loaded combat");
 
 //next room function 
 //previous room 
+//surprise/reaction
+
 //talk to
 //sell/buy
 //rest
