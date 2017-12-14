@@ -65,7 +65,7 @@ function loadChar(){
 		$("#level").append(" "+curChar[0].level);
 		$("#class").append(" "+curChar[0].class);
 		$("#align").append(" "+curChar[0].alignment);
-		$("#hp").append(" "+curChar[0].hp);
+		$("#hp").text("Hit Points: "+curChar[0].curhp+"/"+curChar[0].hp);
 		$("#ac").append(" "+curChar[0].ac);
 		$("#str").append(" "+curChar[0].str);
 		$("#dex").append(" "+curChar[0].dex);
