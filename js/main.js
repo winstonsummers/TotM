@@ -54,5 +54,25 @@ $("#submit").click(function(e) {
 
 
 $("#settings").click(function() {
-    $( "#dialog" ).dialog();
-  } );
+    $( "#dialog" ).dialog({width: 500});
+} );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

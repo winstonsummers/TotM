@@ -8,23 +8,23 @@
 </head>
 
 <body>
-    <div>
+    <div class="boxes">
         <h1 id="totm"> Welcome to the Theater of the Mind </h1></div>
     <br>
-    <div id="charSheet">
+    <div class="boxes" id="charSheet">
         <h3 id="name">Name:</h3>
-        <div id="info">
+        <div class="boxes" id="info">
             <p id="level">Level:</p>
             <p id="class">Class:</p>
             <p id="align">Alignment:</p>
         </div>
         <br>
-        <div id="hpac">
+        <div class="boxes" id="hpac">
             <p id="hp">Hit Points:</p>
             <p id="ac">Armor Class:</p>
         </div>
         <br>
-        <div id="stats">
+        <div class="boxes" id="stats">
             <p id="str">Str:</p>
             <p id="dex">Dex:</p>
             <p id="con">Con:</p>
@@ -32,23 +32,23 @@
             <p id="wis">Wis:</p>
             <p id="cha">Cha:</p>
         </div>
-        <div id="thing">
-            <div id="saves">
+        <div class="boxes" id="thing">
+            <div class="boxes" id="saves">
                 <p id="pois">Poison:</p>
                 <p id="wand">Wands:</p>
                 <p id="para">Paralysis:</p>
                 <p id="bre">Breath:</p>
                 <p id="spell">Spells:</p>
             </div>
-            <div id="exp">
+            <div class="boxes" id="exp">
                 <p>XP:</p>
             </div>
         </div>
     </div>
-    <input id="settings" type="button" value="Settings">
-    <div id="log">
+    <input id="settings" type="button" value="Help">
+    <div class="boxes" id="log">
         <h3>Log Book</h3>
-        <div id="book">
+        <div class="boxes" id="book">
             <p>&nbsp;</p>
         </div>
         <form>
@@ -56,15 +56,15 @@
             <input id="submit" type="submit" value="We'll see">
         </form>
     </div>
-    <div id="gear">
-        <div id="store">
+    <div class="boxes" id="gear">
+        <div class="boxes" id="store">
             <h3>In Room</h3>
             <ol>
                 <li>Nothing...</li>
             </ol>
         </div>
         <br>
-        <div id="inventory">
+        <div class="boxes" id="inventory">
             <h3>Inventory</h3>
             <ol>
                 <li>Nothing...</li>
@@ -72,10 +72,28 @@
         </div>
     </div>
 
-    <div id="dialog" title="Basic dialog">
-      <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    <div id="dialog" title="Help">
+      <h3>Commands</h3>
+      <p>Here is a list of commands that Totm knows. You can also type something in to see it appear in the log book.</p>
+      <ul>
+          <li>"PICK-UP" add an item to your inventory from the room</li>
+          <li>"NEXT-ROOM" moves you to the next room</li>
+          <li>"PREVIOUS-ROOM" moves you to the previous room(totm only remebers one room back, further rooms back will be empty"</li>
+          <li>"TALK-TO" talk to a person or monster in the room</li>
+          <li>"CAST-SPELL" cast a memorized spell from your spell or prayer book</li>
+          <li>"DETECT-TRAPS" search for and disarm traps</li>
+          <li>"LISTEN-AT-DOOR" listen at the door to get an idea of what is in the next room</li>
+          <li>"REST" rest for the night to recover hp and memorize spells</li>
+          <li>"SELL" sell item from inventory</li>
+          <li>"BUY" buy item from in the room</li>
+          <li>"LOAD" load a previously made character</li>
+          <li>"EQUIP" equip and item from inventory</li>
+          <li>"UNEQUIP" read equip and take a guess :P</li>
+          <li>"LEVEL-UP" increase the level of your character</li>
+          <li>"RESTART" start at the begining with nothing and no one</li>
+      </ul>
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/dice.js"></script>
