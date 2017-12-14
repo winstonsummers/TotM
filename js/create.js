@@ -20,7 +20,8 @@ var characters = [{
     paralysis: 12,
     breath: 14,
     spells: 13,
-    exp: 300000
+    exp: 300000,
+    bab: 2
 },
 {
     name: "Bob B. Bobbington",
@@ -41,7 +42,8 @@ var characters = [{
     paralysis: 12,
     breath: 15,
     spells: 14,
-    exp: 2400
+    exp: 2400,
+    bab: 0
 }];
 
 //load character function

@@ -3,7 +3,9 @@ var userInput;
 var data = [];
 var curChar = [];
 var curRoom = [];
+var equiped = [];
 var inventory = [];
+var monsterCount = 0;
 $("#submit").click(function(e){
 	e.preventDefault();
 	userInput = $("#cmd").val();
@@ -11,12 +13,10 @@ $("#submit").click(function(e){
 	$("#cmd").val("").scroll();
 	data = userInput.split(" ")
 	if(data[0].toUpperCase() == "ATTACK"){
-		//call attack function
-		//add message to log book
+		attack();
 	}else if(data[0].toUpperCase() == "PICK-UP"){
 
 	}else if(data[0].toUpperCase() == "NEXT-ROOM"){
-		$("#book p").append("You push the door open...<br>");
 		next();
 	}else if(data[0].toUpperCase() == "PREVIOUS-ROOM"){
 		
