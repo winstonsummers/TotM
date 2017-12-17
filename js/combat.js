@@ -9,6 +9,10 @@ var weapons = [{
     value: 3
 }];
 
+function chest() {
+    //randomly generate loot based on mons
+}
+
 function resetRoom(){
     $("#store ol").empty();
         for (var i = 0; i < curRoom.length; i++) {
@@ -17,6 +21,11 @@ function resetRoom(){
 }
 
 //generate loot, give exp
+function dallaBillz() {
+    //monster drop and gear they have
+    chest();
+    resetRoom();
+}
 
 //monster attacks back
 function returnFire(){
@@ -59,6 +68,7 @@ function attack() {
 //dead monster function
 function deadMon(){
     if (curRoom[0].curhp <= 0){
+        dallaBillz();
         curRoom.shift();
         resetRoom();
         monsterCount--;
