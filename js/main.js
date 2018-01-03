@@ -49,7 +49,10 @@ $("#submit").click(function(e) {
     } else {
         $("#book p").append(userInput + "<br>");
     }
+    // updateScroll();
 });
+
+//auto scroll funtion
 
 
 

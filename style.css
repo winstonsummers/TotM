@@ -74,10 +74,13 @@ ol{
 	height: 535px;
 	text-align: left;
 }
-#info, #hpac{
+#info,
+#hpac{
 	width: 200px;
 }
-#stats, #saves, #exp{
+#stats,
+#saves,
+#exp{
 	width: 80px;
 }
 #thing{
@@ -103,20 +106,11 @@ ol{
 #inventory{
 	height: 200px;
 }
-#store, #inventory{
+#store,
+#inventory{
 	width: 110px;
 	margin: 4px 0;
 }
 #dialog{
 	display: none;
 }
-
-
-
-
-
-
-
-
-
-

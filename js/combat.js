@@ -10,7 +10,8 @@ var weapons = [{
 }];
 
 function chest() {
-    //randomly generate loot based on mons
+    //randomly generate loot based on monster if apt
+    //randomly generate money
 }
 
 function resetRoom(){
@@ -68,7 +69,7 @@ function attack() {
 //dead monster function
 function deadMon(){
     if (curRoom[0].curhp <= 0){
-        dallaBillz();
+        // dallaBillz();
         curRoom.shift();
         resetRoom();
         monsterCount--;

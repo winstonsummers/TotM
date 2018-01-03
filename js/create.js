@@ -61,24 +61,24 @@ function loadChar(){
 		$("#book p").append("They are not here right now...<br>")
 		//show stats via DOM
 	}else{
-		$("#name").append(" "+curChar[0].name);
-		$("#level").append(" "+curChar[0].level);
-		$("#class").append(" "+curChar[0].class);
-		$("#align").append(" "+curChar[0].alignment);
-		$("#hp").text("Hit Points: "+curChar[0].curhp+"/"+curChar[0].hp);
-		$("#ac").append(" "+curChar[0].ac);
-		$("#str").append(" "+curChar[0].str);
-		$("#dex").append(" "+curChar[0].dex);
-		$("#con").append(" "+curChar[0].con);
-		$("#int").append(" "+curChar[0].int);
-		$("#wis").append(" "+curChar[0].wis);
-		$("#cha").append(" "+curChar[0].cha);
-		$("#pois").append(" "+curChar[0].poison);
-		$("#wand").append(" "+curChar[0].wands);
-		$("#para").append(" "+curChar[0].paralysis);
-		$("#bre").append(" "+curChar[0].breath);
-		$("#spell").append(" "+curChar[0].spells);
-		$("#exp").append(" "+curChar[0].exp);
+		$("#name").empty().append("Name: "+curChar[0].name);
+		$("#level").empty().append("Level: "+curChar[0].level);
+		$("#class").empty().append("Class: "+curChar[0].class);
+		$("#align").empty().append("Alignment: "+curChar[0].alignment);
+		$("#hp").empty().append("Hit Points: "+curChar[0].curhp+"/"+curChar[0].hp);
+		$("#ac").empty().append("Armor Class: "+curChar[0].ac);
+		$("#str").empty().append("Str: "+curChar[0].str);
+		$("#dex").empty().append("Dex: "+curChar[0].dex);
+		$("#con").empty().append("Con: "+curChar[0].con);
+		$("#int").empty().append("Inst: "+curChar[0].int);
+		$("#wis").empty().append("Wis: "+curChar[0].wis);
+		$("#cha").empty().append("Cha: "+curChar[0].cha);
+		$("#pois").empty().append("Poison: "+curChar[0].poison);
+		$("#wand").empty().append("Wands: "+curChar[0].wands);
+		$("#para").empty().append("Paralysis: "+curChar[0].paralysis);
+		$("#bre").empty().append("Breath: "+curChar[0].breath);
+		$("#spell").empty().append("Spells: "+curChar[0].spells);
+		$("#exp").empty().append("XP: "+curChar[0].exp);
 	};
 	
 
