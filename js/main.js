@@ -7,6 +7,8 @@ var preRoom = [];
 var equiped = [];
 var inventory = [];
 var monsterCount = 0;
+var killCount = 0;
+var roomCount=0;
 $("#submit").click(function(e) {
     e.preventDefault();
     userInput = $("#cmd").val();

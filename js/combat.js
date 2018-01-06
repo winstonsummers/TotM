@@ -1,32 +1,6 @@
 console.log("loaded combat");
 var toHit;
 var damage;
-//array of possible items/weapons/etc.
-var weapons = [{
-    type: "Weapon",
-    name: "Dagger",
-    dmg: rollIV(),
-    value: 3
-}];
-
-function chest() {
-    //randomly generate loot based on monster if apt
-    //randomly generate money
-}
-
-function resetRoom(){
-    $("#store ol").empty();
-        for (var i = 0; i < curRoom.length; i++) {
-            $("#store ol").append("<li>" + curRoom[i].name + "</li>");
-        }
-}
-
-//generate loot, give exp
-function dallaBillz() {
-    //monster drop and gear they have
-    chest();
-    resetRoom();
-}
 
 //monster attacks back
 function returnFire(){
@@ -72,6 +46,7 @@ function deadMon(){
         // dallaBillz();
         curRoom.shift();
         resetRoom();
+        killCount++;
         monsterCount--;
         $("#book p").append("Your foe falls at your hand. You are Victorious!<br>");
     }else{
@@ -83,37 +58,10 @@ function deadMon(){
 function killChar(){
     if(curChar[0].curhp <= 0){
         inventory = [];
-        $("#book p").append("You have been Slayin. Bards will sing of your trials for generations to come...<br>");
+        $("#inventory ol").empty();
+        $("#book p").append("You have been Slayin. Bards will sing of your trials for generations to come...<br> You killed",killCount,"monsters in",roomCount,"rooms!");
     }
 }
 
-//pick up function
 
-//next room function 
-function next() {
-    //disable next room until monsters are gone
-    if (monsterCount > 0) {
-        $("#book p").append("You must defeat your enemies before you leave<br>");
-    } else {
-        $("#book p").append("You push the door open...<br>");
-        //empty the current room array and ol
-        //spawn monster in current room
-        curRoom = [];
-        curRoom.unshift($.extend(true, [], monsters[0]));
-        monsterCount++;
-        //add monster to the ol
-        resetRoom();
-    }
-    //strech goals
-    //roll for surpirse
-
-    //roll for reaction
-};
-//previous room 
-
-//talk to
-//sell/buy
-//rest
 //spells/maricles
-//detect traps
-//listen at door

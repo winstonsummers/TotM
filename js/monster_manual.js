@@ -12,5 +12,5 @@ var monsters = [{
     paralysis: 16,
     breath: 17,
     spells: 15,
-    gear: []
+    loot: []
 }];
