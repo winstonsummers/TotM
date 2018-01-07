@@ -26,57 +26,18 @@ function rollC() {
 };
 
 //savings throws
-	//there is a dryer way to write this.... to be revisited
-function poison(){
-	var save=rollXX();
-	if(save>=curChar[0].poison){
+function toSave(save){
+	var roll=rollXX();
+	if(roll>=save){
 		//insert success flavor text here
-	}else if(save<curChar[0].poison){
+	}else if(roll<save){
+		//possibly another if statement
 		//deal damage
 		//check player death
 		//insert failure/death flavor text here
 	}
 }
-function wands(){
-	var save=rollXX();
-	if(save>=curChar[0].poison){
-		//insert success flavor text here
-	}else if(save<curChar[0].poison){
-		//deal damage
-		//check player death
-		//insert failure/death flavor text here
-	}
-}
-function paralysis(){
-	var save=rollXX();
-	if(save>=curChar[0].poison){
-		//insert success flavor text here
-	}else if(save<curChar[0].poison){
-		//deal damage
-		//check player death
-		//insert failure/death flavor text here
-	}
-}
-function breath(){
-	var save=rollXX();
-	if(save>=curChar[0].poison){
-		//insert success flavor text here
-	}else if(save<curChar[0].poison){
-		//deal damage
-		//check player death
-		//insert failure/death flavor text here
-	}
-}
-function spells(){
-	var save=rollXX();
-	if(save>=curChar[0].poison){
-		//insert success flavor text here
-	}else if(save<curChar[0].poison){
-		//deal damage
-		//check player death
-		//insert failure/death flavor text here
-	}
-}
+
 
 
 

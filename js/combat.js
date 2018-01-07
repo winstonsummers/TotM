@@ -58,7 +58,7 @@ function deadMon(){
 function killChar(){
     if(curChar[0].curhp <= 0){
         inventory = [];
-        $("#inventory ol").empty();
+        $("#inventory ol").empty().append("<li>Nothing...</li>");;
         $("#book p").append("You have been Slayin. Bards will sing of your trials for generations to come...<br> You killed",killCount,"monsters in",roomCount,"rooms!");
     }
 }

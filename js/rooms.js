@@ -34,22 +34,38 @@ var rooms=[{
 	}]
 },
 {
-	text: "",
+	text: "As you pull the door open you feel uneasy. A long hall stretches out in front of you. The light shining through the doorway illuminates a short distance. You light a torch and are amazed at the dust that has gathered, this is clearly not the beaten path. Musk in the air, not the musk of a hall untouch by time. As you reach the end of the hall, you hear the sound ooze dripping from the ceiling. Gross!",
 	enemies: [{
-		name: "",
-		id: ,
-		number:
+		name: "Black Pudding",
+		id: 3,
+		number: 1
 	}],
 	traps: [{
-		name: "",
-		id:
+		name: null,
+		id: null
+	}],
+	loot:[{
+		type: null,
+		name: null,
+		quantity: null
+	}]
+},
+{
+	text: "As you approach the door you hear clicking on the other side. The door knob is rusted and crumbles in your hand. Silence, the door falls down; an four legged insect the size of a pony with a long tail stares at you.",
+	enemies: [{
+		name: "Rust Monster",
+		id: 4,
+		number: 1
+	}],
+	traps:[{
+		name: null,
+		id:null
 	}],
 	loot:[{
 		type: "",
 		name: "",
-		quantity: ,
+		quantity: null
 	}]
-
 }]
 
 

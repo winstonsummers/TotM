@@ -1,8 +1,12 @@
 console.log("loaded traps");
 var traps=[{
 	name: 'Door',
-	save: paralysis(),
-	dmg: rollIV(),
+	save: function(){
+		paralysis();
+	},
+	dmg: function(){
+		rollIV();
+	},
 	success: "",
 	failure: "",
 	death: ""

@@ -8,14 +8,24 @@ function next() {
     if (monsterCount > 0) {
         $("#book p").append("You must defeat your enemies before you leave<br>");
     } else {
-        $("#book p").append("You push the door open...<br>");
+        // pick random room
+        var nextRoom = rooms[dice(0, rooms.length)];
+        //push what is left in the room to a preRoom[]
+        $.extend(true, preRoom, curRoom);
+        curRoom =[];
+        for (var i = 0; i < nextRoom.enemies.number; i++) {
+            
+        }
+
+        // apply flavor text to log
+        //$("#book p").append("You push the door open...<br>");
         //empty the current room array and ol
         //spawn monster in current room
-        curRoom = [];
-        curRoom.unshift($.extend(true, [], monsters[0]));
-        monsterCount++;
+        // curRoom = [];
+        // curRoom.unshift($.extend(true, [], monsters[0]));
+        // monsterCount++;
         //add monster to the ol
-        resetRoom();
+        // resetRoom();
     }
     //strech goals
     //roll for surpirse
