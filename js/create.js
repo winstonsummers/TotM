@@ -46,44 +46,53 @@ var characters = [{
     bab: 0
 }];
 
+function load(name){
+    for(var i = 0; i<characters.length; i++){
+        if(characters[i].name == name){
+            curChar = [];
+        //push character to curChar array
+            curChar.push(characters[i]);
+        }   
+    }
+    if(curChar == undefined){
+        $("#book p").append("They are not here right now...<br>")
+        //show stats via DOM
+    }else{
+        $("#book p").append("Let me see where they are...<br>");
+        $("#name").empty().append("Name: "+curChar[0].name);
+        $("#level").empty().append("Level: "+curChar[0].level);
+        $("#class").empty().append("Class: "+curChar[0].class);
+        $("#align").empty().append("Alignment: "+curChar[0].alignment);
+        $("#hp").empty().append("Hit Points: "+curChar[0].curhp+"/"+curChar[0].hp);
+        $("#ac").empty().append("Armor Class: "+curChar[0].ac);
+        $("#str").empty().append("Str: "+curChar[0].str);
+        $("#dex").empty().append("Dex: "+curChar[0].dex);
+        $("#con").empty().append("Con: "+curChar[0].con);
+        $("#int").empty().append("Inst: "+curChar[0].int);
+        $("#wis").empty().append("Wis: "+curChar[0].wis);
+        $("#cha").empty().append("Cha: "+curChar[0].cha);
+        $("#pois").empty().append("Poison: "+curChar[0].poison);
+        $("#wand").empty().append("Wands: "+curChar[0].wands);
+        $("#para").empty().append("Paralysis: "+curChar[0].paralysis);
+        $("#bre").empty().append("Breath: "+curChar[0].breath);
+        $("#spell").empty().append("Spells: "+curChar[0].spells);
+        $("#exp").empty().append("XP: "+curChar[0].exp);
+    };
+}
+
 //load character function
 function loadChar(){
 	//for loop to find the char
 	charSelect = data.splice(1).join(" ");
-	for(var i = 0; i<characters.length; i++){
-		if(characters[i].name == charSelect){
-			curChar = [];
-		//push character to curChar array
-			curChar.push(characters[i]);
-		}	
-	}
-	if(curChar == undefined){
-		$("#book p").append("They are not here right now...<br>")
-		//show stats via DOM
-	}else{
-		$("#name").empty().append("Name: "+curChar[0].name);
-		$("#level").empty().append("Level: "+curChar[0].level);
-		$("#class").empty().append("Class: "+curChar[0].class);
-		$("#align").empty().append("Alignment: "+curChar[0].alignment);
-		$("#hp").empty().append("Hit Points: "+curChar[0].curhp+"/"+curChar[0].hp);
-		$("#ac").empty().append("Armor Class: "+curChar[0].ac);
-		$("#str").empty().append("Str: "+curChar[0].str);
-		$("#dex").empty().append("Dex: "+curChar[0].dex);
-		$("#con").empty().append("Con: "+curChar[0].con);
-		$("#int").empty().append("Inst: "+curChar[0].int);
-		$("#wis").empty().append("Wis: "+curChar[0].wis);
-		$("#cha").empty().append("Cha: "+curChar[0].cha);
-		$("#pois").empty().append("Poison: "+curChar[0].poison);
-		$("#wand").empty().append("Wands: "+curChar[0].wands);
-		$("#para").empty().append("Paralysis: "+curChar[0].paralysis);
-		$("#bre").empty().append("Breath: "+curChar[0].breath);
-		$("#spell").empty().append("Spells: "+curChar[0].spells);
-		$("#exp").empty().append("XP: "+curChar[0].exp);
-	};
-	
-
+    load(charSelect);
 }
 
+$("#bob").click(function(){
+    load("Bob B. Bobbington");
+});
+$("#john").click(function(){
+    load("John the Cleric");
+});
 //generate character totally randomly
 //push new character to array
 

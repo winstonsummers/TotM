@@ -39,6 +39,10 @@ function resetRoom(){
     for(var i=0;i<curRoom.length;i++){
         $("#store ol").append("<li>" + curRoom[i].name + "</li>");
     }
+    $("#inventory ol").empty();
+    for(var i=0;i<inventory.length;i++){
+        $("#inventory ol").append("<li>" + inventory[i].name + "</li>");
+    }
 }
 
 function chest() {
@@ -46,8 +50,27 @@ function chest() {
     //randomly generate money
 }
 
-//pick up function
+//functions for dialogs
+$("#settings").click(function() {
+    $( "#setDia" ).dialog({width: 500});
+} );
+$("#char").click(function() {
+    $( "#charDia" ).dialog({width: 500});
+} );
 
+
+//pick up function
+function take(){
+    if (curRoom.length <= 0) {
+        $("#book p").append("There is nothing there...<br>");
+    }else if (curRoom[data[1]-1].type == "enemy") {
+        $("#book p").append("That monster won't fit in your pocket. Please reconsider...<br>");
+    }else{
+        inventory.unshift(curRoom[data[1]-1]);
+        curRoom.splice(data[1]-1, 1);
+        resetRoom();
+    }
+}
 
 //previous room 
 

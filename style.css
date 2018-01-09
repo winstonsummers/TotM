@@ -116,6 +116,9 @@ ol{
 	width: 110px;
 	margin: 4px 0;
 }
-#dialog{
+.dialog{
 	display: none;
+}
+em{
+	cursor: pointer;
 }

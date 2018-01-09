@@ -18,7 +18,7 @@ $("#submit").click(function(e) {
     if (data[0].toUpperCase() == "ATTACK") {
         attack();
     } else if (data[0].toUpperCase() == "PICK-UP") {
-
+        take();
     } else if (data[0].toUpperCase() == "NEXT-ROOM") {
         next();
     } else if (data[0].toUpperCase() == "PREVIOUS-ROOM") {
@@ -38,7 +38,6 @@ $("#submit").click(function(e) {
     } else if (data[0].toUpperCase() == "BUY") {
 
     } else if (data[0].toUpperCase() == "LOAD") {
-        $("#book p").append("Let me see where they are...<br>");
         loadChar();
     } else if (data[0].toUpperCase() == "EQUIP") {
 
@@ -57,10 +56,6 @@ $("#submit").click(function(e) {
 //auto scroll funtion
 
 
-
-$("#settings").click(function() {
-    $( "#dialog" ).dialog({width: 500});
-} );
 
 
 

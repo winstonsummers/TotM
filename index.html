@@ -72,11 +72,11 @@
             </ol>
         </div>
     </div>
-    <div id="dialog" title="Help">
+    <div class="dialog" title="Help" id="setDia">
         <h3>Commands</h3>
         <p>Here is a list of commands that Totm knows. You can also type something in to see it appear in the log book.</p>
         <ul>
-            <li>"ATTACK __" attack the enemy at the number you decide</li>
+            <li>"ATTACK __" attack the enemy at the number you decclasse</li>
             <li>"PICK-UP" add an item to your inventory from the room</li>
             <li>"NEXT-ROOM" moves you to the next room</li>
             <li>"PREVIOUS-ROOM" moves you to the previous room(totm only remebers one room back, further rooms back will be empty)</li>
@@ -93,6 +93,17 @@
             <li>"LEVEL-UP" increase the level of your character</li>
             <li>"RESTART" start at the begining with nothing and no one</li>
         </ul>
+    </div>
+    <div class="dialog" title="Help" id="charDia">
+        <h3>Characters</h3>
+        <p>This game comes with two premade characters; <em id="bob">Bob B. Bobbington</em> and <em id="john">John the Cleric</em>. Feel free to copy and paste their names into the command line with load in front of them.</p>
+        <br>
+        <P>Or you can make your own!</P>
+        <form>
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Adventurer">
+            <!-- randomly generate stats and make them dragable to the stats user wants them in -->
+        </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
