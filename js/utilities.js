@@ -7,7 +7,7 @@ function next() {
     } else if(roomCount > rooms.length){
         $("#book p").append("You open the door and for the first time in too long you smell fresh air. Standing outside, Birds chip and small animals scurry away. As the door closes and locks behind you, you exhale with relief.<br>");
         $("#book p").append("You killed",killCount,"monsters in",roomCount,"rooms!");
-    }else if{
+    }else {
         curRoom =[];
         for (var i = 0; i < rooms[roomCount].roomObjs.length; i++) {
             if(rooms[roomCount].roomObjs[i].type !== 'enemy' || rooms[roomCount].roomObjs[i].life > 0){
