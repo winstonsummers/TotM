@@ -1,31 +1,24 @@
 console.log("loaded utilities");
-
-
-
 //next room function 
 function next() {
     //disable next room until monsters are gone
     if (monsterCount > 0) {
         $("#book p").append("You must defeat your enemies before you leave<br>");
     } else {
-        // pick random room
-        var nextRoom = rooms[dice(0, rooms.length)];
-        //push what is left in the room to a preRoom[]
-        $.extend(true, preRoom, curRoom);
         curRoom =[];
-        for (var i = 0; i < nextRoom.enemies.number; i++) {
-            
+        for (var i = 0; i < rooms[roomCount].roomObjs.length; i++) {
+            if(rooms[roomCount].roomObjs[i].type !== 'enemy' || rooms[roomCount].roomObjs[i].life > 0){
+                curRoom.unshift(rooms[roomCount].roomObjs[i]);
+            }
         }
-
         // apply flavor text to log
-        //$("#book p").append("You push the door open...<br>");
-        //empty the current room array and ol
-        //spawn monster in current room
-        // curRoom = [];
-        // curRoom.unshift($.extend(true, [], monsters[0]));
-        // monsterCount++;
+        $("#book p").append(rooms[roomCount].text+"<br>");
+        monsterCount = rooms[roomCount].roomObjs.filter(function(obj){
+            return obj.type === 'enemy' && obj.life > 0;
+        }).length;
+        console.log('number of monsters in the room is', monsterCount);
         //add monster to the ol
-        // resetRoom();
+        resetRoom();
     }
     //strech goals
     //roll for surpirse
@@ -35,16 +28,17 @@ function next() {
 
 //generate loot, give exp
 function dallaBillz() {
-    //monster drop and gear they have
+    //monster drop gear they have
     chest();
     resetRoom();
 }
 
 function resetRoom(){
+    console.log('curRoom is', curRoom);
     $("#store ol").empty();
-        for (var i = 0; i < curRoom.length; i++) {
-            $("#store ol").append("<li>" + curRoom[i].name + "</li>");
-        }
+    for(var i=0;i<curRoom.length;i++){
+        $("#store ol").append("<li>" + curRoom[i].name + "</li>");
+    }
 }
 
 function chest() {

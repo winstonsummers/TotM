@@ -26,14 +26,14 @@ function attack() {
     if (monsterCount == 0) {
         $("#book p").append("You swing... at nothing...<br>");
         //strech goal, fight the shop keeper
-    } else if ((toHit - curChar[0].bab) <= curRoom[0].ac) {
+    } else if ((toHit - curChar[0].bab) <= curRoom[data[1]-1].ac) {
         //roll dmg
         damage = rollIV();
-        curRoom[0].curhp = curRoom[0].curhp - damage;
+        curRoom[data[1]-1].life = curRoom[data[1]-1].life - damage;
         $("#book p").append("You hit your foe for "+damage+" points!<br>");
         deadMon();
         //if miss
-    } else if ((toHit - curChar[0].bab) > curRoom[0].ac) {
+    } else if ((toHit - curChar[0].bab) > curRoom[data[1]-1].ac) {
         $("#book p").append("You swing and miss your foe<br>");
         returnFire();
     } else {
@@ -42,13 +42,19 @@ function attack() {
 }
 //dead monster function
 function deadMon(){
-    if (curRoom[0].curhp <= 0){
+    if (curRoom[data[1]-1].life <= 0){
         // dallaBillz();
-        curRoom.shift();
+        curRoom.splice(data[1]-1, 1);
         resetRoom();
         killCount++;
         monsterCount--;
-        $("#book p").append("Your foe falls at your hand. You are Victorious!<br>");
+        $("#book p").append("Your foe falls at your hand, <br>");
+        if (monsterCount == 0) {
+            roomCount++;
+            $("#book p").append("You are Victorious! <br>");
+        }else{
+            $("#book p").append("But there's no time to celebrate, as their comrades close in! <br>");
+        }
     }else{
         returnFire();
     }
